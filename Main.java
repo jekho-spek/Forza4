@@ -8,5 +8,21 @@ public class Main {
             System.out.println("Inserisci 1 (PvP) o 2 (PvC)");
             modalita = Leggi.unInt();
         }
+
+        if (modalita == 1) {
+            System.out.print("Nome Giocatore 1: ");
+            String nome1 = Leggi.unoString();
+            System.out.print("Nome Giocatore 2: ");
+            String nome2 = Leggi.unoString();
+
+            GamePvP partita = new GamePvP(nome1, nome2);
+            partita.avvia();
+        } else {
+            System.out.print("Nome Giocatore: ");
+            String nome = Leggi.unoString();
+
+            GamePvC partita = new GamePvC(nome);
+            partita.avvia();
+        }
     }
 }
