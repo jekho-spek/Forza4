@@ -25,5 +25,4 @@ public class Main {
             partita.avvia();
         }
     }
-    //prova
 }
