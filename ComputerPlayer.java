@@ -12,5 +12,22 @@ public class ComputerPlayer extends Player {
 
     // Sceglie una colonna valida a caso (1-7)
     public int scegliColonna(Scacchiera scacchiera) {
-}
+         // Controllo: se tutte le colonne sono piene, ritorno -1
+        boolean almenoUnaValida = false;
+        for (int c = 1; c <= 7; c++) {
+            if (scacchiera.colonnaValida(c)) {
+                almenoUnaValida = true;
+                break;
+            }
+        }
+        if (!almenoUnaValida) return -1;
 
+        // Scelta casuale
+        int colonna;
+        do {
+            colonna = random.nextInt(7) + 1; // scelgo tra 1 e 7
+        } while (!scacchiera.colonnaValida(colonna));
+
+        return colonna;
+    }
+}
