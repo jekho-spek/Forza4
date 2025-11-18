@@ -30,11 +30,11 @@ public class GamePvP {
 
             if (scacchiera.controlloVittoria(corrente.getSimbolo())) {
                 scacchiera.stampa();
-                System.out.println("🏆 " + corrente.getNome() + " ha vinto!");
+                System.out.println(corrente.getNome() + " ha vinto!");
                 finito = true;
             } else if (scacchiera.isPiena()) {
                 scacchiera.stampa();
-                System.out.println("🤝 Pareggio!");
+                System.out.println("Pareggio!");
                 finito = true;
             } else {
                 corrente = (corrente == player1) ? player2 : player1;
