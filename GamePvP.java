@@ -1,16 +1,16 @@
 public class GamePvP {
     private Scacchiera scacchiera;
-    private Player player1;
-    private Player player2;
+    private Player giocatore1;
+    private Player giocatore2;
 
     public GamePvP(String nome1, String nome2) {
         scacchiera = new Scacchiera();
-        player1 = new Player(nome1, 'X');
-        player2 = new Player(nome2, 'O');
+        giocatore1 = new Player(nome1, 'X');
+        giocatore2 = new Player(nome2, 'O');
     }
 
     public void avvia() {
-        Player corrente = player1;
+        Player corrente = giocatore1;
         boolean finito = false;
         scacchiera.inizializza();
 
@@ -37,7 +37,7 @@ public class GamePvP {
                 System.out.println("Pareggio!");
                 finito = true;
             } else {
-                corrente = (corrente == player1) ? player2 : player1;
+                corrente = (corrente == giocatore1) ? giocatore2 : giocatore1;
             }
         }
 

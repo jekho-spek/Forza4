@@ -5,7 +5,7 @@ public class Main {
         int modalita = Leggi.unInt();
 
         while (modalita != 1 && modalita != 2) {
-            System.out.println("Inserisci 1 (PvP) o 2 (PvC)");
+            System.out.println("Inserisci 1 (PvP) o 2 (PvC): ");
             modalita = Leggi.unInt();
         }
 

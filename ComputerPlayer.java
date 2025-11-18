@@ -12,7 +12,7 @@ public class ComputerPlayer extends Player {
 
     // Sceglie una colonna valida a caso (1-7)
     public int scegliColonna(Scacchiera scacchiera) {
-         // Controllo: se tutte le colonne sono piene, ritorno -1
+         // Se tutte le colonne sono piene, ritorno -1
         boolean almenoUnaValida = false;
         for (int c = 1; c <= 7; c++) {
             if (scacchiera.colonnaValida(c)) {
