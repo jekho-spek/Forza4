@@ -1,6 +1,6 @@
 public class Player {
-    private String nome;
-    private char simbolo;
+    private final String nome;
+    private final char simbolo;
 
     public Player(String nome, char simbolo) {
         this.nome = nome;
