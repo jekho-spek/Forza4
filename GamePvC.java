@@ -9,7 +9,7 @@ public class GamePvC {
         computer = new ComputerPlayer("Computer", 'O');
     }
 
-    public void avvia() {
+    public void avviaGioco() {
         Player corrente = umano;
         boolean finito = false;
         scacchiera.inizializza();

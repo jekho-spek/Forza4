@@ -9,7 +9,7 @@ public class GamePvP {
         giocatore2 = new Player(nome2, 'O');
     }
 
-    public void avvia() {
+    public void avviaGioco() {
         Player giocatoreCorrente = giocatore1;
         scacchiera.inizializza();
 

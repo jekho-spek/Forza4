@@ -31,13 +31,13 @@ public class Main {
         System.out.print("Nome Giocatore 2: ");
         String nome2 = Leggi.unoString();
 
-        new GamePvP(nome1, nome2).avvia();
+        new GamePvP(nome1, nome2).avviaGioco();
     }
 
     private static void avviaPvC() {
         System.out.print("Nome Giocatore: ");
         String nome = Leggi.unoString();
 
-        new GamePvC(nome).avvia();
+        new GamePvC(nome).avviaGioco();
     }
 }
