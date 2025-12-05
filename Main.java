@@ -21,6 +21,7 @@ public class Main {
             modalità = Leggi.unInt();
         }
         return modalità;
+
     }
 
     private static void avviaPvP() {

@@ -10,22 +10,21 @@ public class GamePvP {
     }
 
     public void avvia() {
-        Player corrente = giocatore1;
+        Player giocatoreCorrente = giocatore1;
         scacchiera.inizializza();
 
         while (true) {
 
             scacchiera.stampa();
 
-            System.out.println("Turno di " + corrente.getNome() + " (" + corrente.getSimbolo() + ")");
+            System.out.println("Turno di " + giocatoreCorrente.getNome() + " (" + giocatoreCorrente.getSimbolo() + ")");
             System.out.print("Scegli la colonna (1-7): ");
 
             int colonna = leggiColonnaValida();
-            scacchiera.inserisciPedina(colonna, corrente.getSimbolo());
-
-            if (scacchiera.controlloVittoria(corrente.getSimbolo())) {
+            scacchiera.inserisciPedina(colonna, giocatoreCorrente.getSimbolo());
+            if (scacchiera.controlloVittoria(giocatoreCorrente.getSimbolo())) {
                 scacchiera.stampa();
-                System.out.println(corrente.getNome() + " ha vinto!");
+                System.out.println(giocatoreCorrente.getNome() + " ha vinto!");
                 break;
             }
 
@@ -35,7 +34,7 @@ public class GamePvP {
                 break;
             }
 
-            corrente = (corrente == giocatore1) ? giocatore2 : giocatore1;
+            giocatoreCorrente = (giocatoreCorrente == giocatore1) ? giocatore2 : giocatore1;
         }
 
         System.out.println("=== FINE PARTITA ===");
