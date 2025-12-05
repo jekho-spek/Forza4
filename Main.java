@@ -15,12 +15,12 @@ public class Main {
     private static int leggiModalita() {
         System.out.println("Scegli modalità: 1 = PvP, 2 = PvC");
 
-        int m = Leggi.unInt();
-        while (m != 1 && m != 2) {
+        int modalità = Leggi.unInt();
+        while (modalità != 1 && modalità != 2) {
             System.out.print("Inserisci 1 (PvP) o 2 (PvC): ");
-            m = Leggi.unInt();
+            modalità = Leggi.unInt();
         }
-        return m;
+        return modalità;
     }
 
     private static void avviaPvP() {
